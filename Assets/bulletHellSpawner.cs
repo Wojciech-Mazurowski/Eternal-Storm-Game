@@ -87,6 +87,7 @@ public class bulletHellSpawner : MonoBehaviour
             collision.quality = ParticleSystemCollisionQuality.High;
             collision.sendCollisionMessages = true;
             //collision.bounce = 0;
+            collision.lifetimeLoss = 100;
 
         }
         // Every 2 secs we will emit.
@@ -110,24 +111,5 @@ public class bulletHellSpawner : MonoBehaviour
                 system.Emit(emitParams, 10);
             }
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        Debug.Log("A");
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("A");
-    }
-   private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("C");
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("D");
     }
 }

@@ -15,6 +15,7 @@ public class colisionDetector : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         Debug.Log("A");
+        other.GetComponent<mainCharacterMovement>();
     }
     
 }
