@@ -4,35 +4,44 @@ using UnityEngine;
 
 public class enemyMovement : MonoBehaviour
 {
-
-    public float moveFrequency;
-    public float timerSpeed;
     
     public float speed;
     public float size;
+    public float timerSpeed;
+    public GameObject movementBoxCenter;
+    public int movementXLimit;
+    public int movementYLimit;
+    public float standByTime;
+    private Vector3 targetPosition;
 
-    private Vector3 startpos;
+    private float timer;
 
-
-     public Vector3 RandomPositionInBox (float width ,float height){
-         return new Vector3(
-             Random.Range(0f,width)+startpos.x-(width*.5f),
-             Random.Range(0f,height)+startpos.y-(height*.5f),
-             startpos.z);
- 
-     }
+    Vector3 GetPositionInsideMovementBox(){
+        var newX = Random.Range(movementBoxCenter.transform.position.x-movementXLimit,movementBoxCenter.transform.position.x+movementXLimit);
+        var newY = Random.Range(movementBoxCenter.transform.position.y-movementYLimit,movementBoxCenter.transform.position.y+movementYLimit);
+        return new Vector3(newX,newY,transform.position.z);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         var localScale = transform.localScale;
         transform.localScale = new Vector3(localScale.x * size, localScale.y * size, localScale.z);
-        startpos = transform.position;
+        targetPosition = GetPositionInsideMovementBox();
     }
 
     // Update is called once per frame
     void Update()
     {
-        startpos = transform.position;
+            var step =  speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+            if (Vector3.Distance(transform.position, targetPosition) < 0.001f){
+                transform.position = targetPosition;
+                timer += Time.deltaTime * timerSpeed;
+                if(timer > standByTime){
+                    timer=0;
+                    targetPosition = GetPositionInsideMovementBox();
+                }
+            }
     }
 }
