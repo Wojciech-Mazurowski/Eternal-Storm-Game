@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 1710844155}
   - component: {fileID: 1710844154}
   - component: {fileID: 1710844152}
+  - component: {fileID: 1710844157}
   - component: {fileID: 1710844156}
   m_Layer: 0
   m_Name: testEnemy
@@ -487,7 +488,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f552e263ae15ed444ad1da85097f0c1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -526,8 +527,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  size: 0.2
+  size: 1
   movementBoxCenter: {fileID: 526789566}
   movementXLimit: 3
   movementYLimit: 5
   standByTime: 1
+--- !u!114 &1710844157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710844151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f32fbe1616374419f51acf0912fbaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleTexture: {fileID: 21300000, guid: f552e263ae15ed444ad1da85097f0c1c, type: 3}
+  upDownTexture: {fileID: 21300000, guid: 6721e0d186627904ea7923ba9bed9dc8, type: 3}
+  backTexture: {fileID: 21300000, guid: 8be9d3bd044adba4c90cd525f6823156, type: 3}
+  forwardTexture: {fileID: 21300000, guid: b97f30c81437a22469fdcc1bf5d8e851, type: 3}
