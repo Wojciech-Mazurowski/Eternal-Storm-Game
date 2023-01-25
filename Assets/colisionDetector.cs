@@ -11,7 +11,10 @@ public class colisionDetector : MonoBehaviour
     private void Update() {
         
     }
-    void OnCollisionEnter2D(Collision2D other) {
+
+    void OnParticleCollision(GameObject other)
+    {
         Debug.Log("A");
     }
+    
 }
