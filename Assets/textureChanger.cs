@@ -23,7 +23,6 @@ public class textureChanger : MonoBehaviour
         NewPos = transform.position;  
         Velocity = (NewPos - PrevPos) / Time.fixedDeltaTime; 
         PrevPos = NewPos;  
-        Debug.Log(Velocity);
         if (Mathf.Abs(Velocity.x) > Mathf.Abs(Velocity.y))
         {
             if (Velocity.x > 0)

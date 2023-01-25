@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class bulletHellSpawner : MonoBehaviour
 {
+
+    public ParticleSystem system;
+
+
     public int colums;
     public float speed;
     public Sprite texture;
@@ -16,9 +20,6 @@ public class bulletHellSpawner : MonoBehaviour
     public float spinSpeed;
     private float time;
     public bool isShooting = false;
-
-
-    public ParticleSystem system;
 
     private void Awake(){
        
@@ -73,6 +74,14 @@ public class bulletHellSpawner : MonoBehaviour
         text.AddSprite(texture);
         text.enabled = true;
 
+        var collision = system.collision;
+        collision.enabled = true;
+        collision.type = ParticleSystemCollisionType.World;
+        collision.mode = ParticleSystemCollisionMode.Collision2D;
+        collision.quality = ParticleSystemCollisionQuality.High;
+        collision.sendCollisionMessages = true;
+        //collision.bounce = 0;
+
         }
         // Every 2 secs we will emit.
         InvokeRepeating("DoEmit", 0f , firerate); // lol
@@ -95,4 +104,9 @@ public class bulletHellSpawner : MonoBehaviour
         }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        Debug.Log("A");
+    }
+
 }
