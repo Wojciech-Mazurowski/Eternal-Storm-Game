@@ -15,6 +15,7 @@ public class bulletHellSpawner : MonoBehaviour
     public Material material;
     public float spinSpeed;
     private float time;
+    public bool isShooting = false;
 
 
     public ParticleSystem system;
@@ -22,6 +23,10 @@ public class bulletHellSpawner : MonoBehaviour
     private void Awake(){
        
             StartFire();
+    }
+
+    private void Update() {
+        
     }
 
     private void FixedUpdate() 
@@ -40,7 +45,7 @@ public class bulletHellSpawner : MonoBehaviour
 
         // Create a green Particle System.
         var go = new GameObject("Particle System");
-        go.transform.Rotate(angle * i, 90, 0); // Rotate so the system emits upwards.
+        go.transform.Rotate(angle * i, 90, 0); 
         go.transform.parent = this.transform;
         go.transform.position = this.transform.position;
         system = go.AddComponent<ParticleSystem>();
@@ -69,15 +74,14 @@ public class bulletHellSpawner : MonoBehaviour
         text.enabled = true;
 
         }
-
-
         // Every 2 secs we will emit.
         InvokeRepeating("DoEmit", 0f , firerate); // lol
+
     }
 
     void DoEmit()
     {
-
+        if(isShooting){
         foreach(Transform child in transform)
         {
         system = child.GetComponent<ParticleSystem>();
@@ -88,6 +92,7 @@ public class bulletHellSpawner : MonoBehaviour
         emitParams.startSize = size;
         emitParams.startLifetime = lifetime;
         system.Emit(emitParams, 10);
+        }
         }
     }
 }

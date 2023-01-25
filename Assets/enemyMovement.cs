@@ -7,7 +7,6 @@ public class enemyMovement : MonoBehaviour
     
     public float speed;
     public float size;
-    public float timerSpeed;
     public GameObject movementBoxCenter;
     public int movementXLimit;
     public int movementYLimit;
@@ -37,8 +36,10 @@ public class enemyMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
             if (Vector3.Distance(transform.position, targetPosition) < 0.001f){
                 transform.position = targetPosition;
-                timer += Time.deltaTime * timerSpeed;
+                timer += Time.deltaTime;
+                this.GetComponent<bulletHellSpawner>().isShooting = true;
                 if(timer > standByTime){
+                    this.GetComponent<bulletHellSpawner>().isShooting = false;
                     timer=0;
                     targetPosition = GetPositionInsideMovementBox();
                 }
