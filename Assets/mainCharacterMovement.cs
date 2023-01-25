@@ -12,7 +12,7 @@ public class mainCharacterMovement : MonoBehaviour
     void Start()
     {
         var localScale = transform.localScale;
-        transform.localScale = new Vector3(localScale.x * size, localScale.y * size, localScale.z);
+        transform.localScale = new Vector3(localScale.x*size,localScale.y*size,localScale.z);
     }
 
     // Update is called once per frame
