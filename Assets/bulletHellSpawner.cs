@@ -22,19 +22,10 @@ public class bulletHellSpawner : MonoBehaviour
     public bool isShooting = false;
     public LayerMask desiredLayers;
     
-    private void Start()
-    {
-
-    }
     private void Awake()
     {
 
         StartFire();
-    }
-
-    private void Update()
-    {
-
     }
 
     private void FixedUpdate()
@@ -55,7 +46,7 @@ public class bulletHellSpawner : MonoBehaviour
             var go = new GameObject("Particle System");
             go.transform.Rotate(angle * i, 90, 0);
             go.transform.parent = this.transform;
-            var pos = this.transform.position;  
+            var pos = this.transform.position;    
             go.transform.position = pos;
             system = go.AddComponent<ParticleSystem>();
             go.GetComponent<ParticleSystemRenderer>().material = particleMaterial;
@@ -66,7 +57,7 @@ public class bulletHellSpawner : MonoBehaviour
             mainModule.startSize = size;
             mainModule.startSpeed = speed;
             mainModule.maxParticles = 100000;
-            mainModule.simulationSpace = ParticleSystemSimulationSpace.World;
+            mainModule.simulationSpace = ParticleSystemSimulationSpace.Local;
 
             var emission = system.emission; //emision module
             emission.enabled = false;

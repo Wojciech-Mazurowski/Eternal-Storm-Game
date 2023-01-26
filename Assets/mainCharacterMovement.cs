@@ -21,7 +21,6 @@ public class mainCharacterMovement : MonoBehaviour
     {
         var localScale = transform.localScale;
         transform.localScale = new Vector3(localScale.x*size,localScale.y*size,localScale.z);
-
     }
 
     // Update is called once per frame
@@ -59,7 +58,7 @@ public class mainCharacterMovement : MonoBehaviour
     public void DecrementHp(){
         health -= 1f;
         if(health==0){
-             SceneManager.LoadScene("MainMenuScene");  
+             // SceneManager.LoadScene("MainMenuScene");  
         }
     }
 
