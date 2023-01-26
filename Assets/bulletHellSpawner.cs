@@ -20,6 +20,7 @@ public class bulletHellSpawner : MonoBehaviour
     public float spinSpeed;
     private float time;
     public bool isShooting = false;
+    public LayerMask desiredLayers;
     
     private void Start()
     {
@@ -54,10 +55,10 @@ public class bulletHellSpawner : MonoBehaviour
             var go = new GameObject("Particle System");
             go.transform.Rotate(angle * i, 90, 0);
             go.transform.parent = this.transform;
-            go.transform.position = this.transform.position;
+            var pos = this.transform.position;  
+            go.transform.position = pos;
             system = go.AddComponent<ParticleSystem>();
             go.GetComponent<ParticleSystemRenderer>().material = particleMaterial;
-
 
             //Modules section
             var mainModule = system.main;
@@ -86,9 +87,8 @@ public class bulletHellSpawner : MonoBehaviour
             collision.mode = ParticleSystemCollisionMode.Collision2D;
             collision.quality = ParticleSystemCollisionQuality.High;
             collision.sendCollisionMessages = true;
-            //collision.bounce = 0;
             collision.lifetimeLoss = 100;
-
+            collision.collidesWith = desiredLayers;
         }
         // Every 2 secs we will emit.
         InvokeRepeating("DoEmit", 0f, firerate); // lol

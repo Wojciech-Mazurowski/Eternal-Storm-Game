@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -37,5 +38,16 @@ public class EnemyHealth : MonoBehaviour
         }else if(hp < 0 ){
             //todo go to area/boss
         }
+    }
+
+    void DecrementHp(int damage){
+        hp-=damage;
+        if(hp<0&&stages==0){
+            SceneManager.LoadScene("MainMenuScene");  
+        }
+    }
+
+    private void OnParticleCollision(GameObject other) {
+        DecrementHp(10);
     }
 }
