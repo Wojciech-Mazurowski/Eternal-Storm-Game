@@ -445,8 +445,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188298487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005, y: 0.294, z: 0}
-  m_LocalScale: {x: 0.9602533, y: 0.9602533, z: 0.56485486}
+  m_LocalPosition: {x: 0.2, y: 0.31, z: 0}
+  m_LocalScale: {x: 0.238815, y: 0.238815, z: 0.1404794}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1300428949}
@@ -493,12 +493,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 55
-  m_Sprite: {fileID: -415533199, guid: 3d0be7c9c88b48746b8a23f55038f80a, type: 3}
+  m_Sprite: {fileID: -625151865, guid: e8fa39d228d2e654b80d646ad3b52351, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 2.395, y: 2.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5900,7 +5900,7 @@ RectTransform:
   - {fileID: 1785564038}
   - {fileID: 314791513}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6331,7 +6331,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.21, y: 0.3}
   serializedVersion: 2
-  m_Radius: 0.14
+  m_Radius: 0.2
 --- !u!114 &1300428953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6339,26 +6339,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300428946}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050a967713d167d4882f5c677f7b5f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 0}
-  colums: 1
+  columns: 0
   speed: 6
   texture: {fileID: 21300000, guid: 8be9d3bd044adba4c90cd525f6823156, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
   firerate: 0.1
   size: 2
-  angle: 180
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: 0
   isShooting: 0
   desiredLayers:
     serializedVersion: 2
     m_Bits: 8
+  space: 1
 --- !u!1 &1694710559
 GameObject:
   m_ObjectHideFlags: 0
@@ -6400,7 +6400,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1710844155}
   - component: {fileID: 1710844154}
-  - component: {fileID: 1710844152}
   - component: {fileID: 1710844157}
   - component: {fileID: 1710844156}
   - component: {fileID: 1710844159}
@@ -6412,33 +6411,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1710844152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710844151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050a967713d167d4882f5c677f7b5f66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  system: {fileID: 0}
-  colums: 50
-  speed: 2
-  texture: {fileID: 21300000, guid: 62ce01ddca719d34ea9648c586a7cc94, type: 3}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  lifetime: 10
-  firerate: 1
-  size: 0.5
-  angle: 180
-  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 0
-  isShooting: 0
-  desiredLayers:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!212 &1710844154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6524,7 +6496,22 @@ MonoBehaviour:
   movementBoxCenter: {fileID: 1694710559}
   movementXLimit: 3
   movementYLimit: 5
-  standByTime: 1
+  standByTime: 10
+  system: {fileID: 0}
+  columns: 10
+  bulletSpeed: 4
+  texture: {fileID: -494365301, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lifetime: 10
+  firerate: 0.15
+  bulletSize: 0.5
+  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  spinSpeed: 20
+  time: 0
+  desiredLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  space: 1
 --- !u!114 &1710844157
 MonoBehaviour:
   m_ObjectHideFlags: 0

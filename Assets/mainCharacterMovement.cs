@@ -15,6 +15,7 @@ public class mainCharacterMovement : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public List<ParticleCollisionEvent> collisionEvents; 
+    public 
         
     // Start is called before the first frame update
     void Start()

@@ -6,25 +6,41 @@ public class bulletHellSpawner : MonoBehaviour
 {
 
     public ParticleSystem system;
-    private Collider colider;
 
-    public int colums;
+    public int columns;
     public float speed;
     public Sprite texture;
     public Color color;
     public float lifetime;
     public float firerate;
     public float size;
-    public float angle;
+    private float angle;
     public Material material;
     public float spinSpeed;
-    private float time;
+    private float time=0;
     public bool isShooting = false;
     public LayerMask desiredLayers;
+    public ParticleSystemSimulationSpace space;
+
+    public void Initialize(int columns, float speed, Sprite texture, Color color, float lifetime, float firerate, float size, float angle, Material material, float spinSpeed, bool isShooting, LayerMask desiredLayers, ParticleSystemSimulationSpace space){
+       this.columns = columns;
+       this.speed = speed;
+       this.texture = texture;
+       this.color = color;
+       this.lifetime = lifetime;
+       this.firerate = firerate;
+       this.size = size;
+       this.angle = angle;
+       this.material = material;
+       this.spinSpeed= spinSpeed;
+       this.isShooting = isShooting;
+       this.desiredLayers = desiredLayers;
+       this.space = space;
+       StartFire();
+    }
     
     private void Awake()
     {
-
         StartFire();
     }
 
@@ -36,8 +52,8 @@ public class bulletHellSpawner : MonoBehaviour
 
     void StartFire()
     {
-        angle = 360f / colums;
-        for (int i = 0; i < colums; i++)
+        angle = 360f / columns;
+        for (int i = 0; i < columns; i++)
         {
             // A simple particle material with no texture.
             Material particleMaterial = material;
@@ -57,7 +73,7 @@ public class bulletHellSpawner : MonoBehaviour
             mainModule.startSize = size;
             mainModule.startSpeed = speed;
             mainModule.maxParticles = 100000;
-            mainModule.simulationSpace = ParticleSystemSimulationSpace.Local;
+            mainModule.simulationSpace = space;
 
             var emission = system.emission; //emision module
             emission.enabled = false;
