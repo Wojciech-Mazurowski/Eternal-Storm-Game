@@ -36,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
             stages--;
             hp=maxHp;
         }else if(hp < 0 ){
-            //todo go to area/boss
+            //todo go to new area/boss
         }
     }
 
