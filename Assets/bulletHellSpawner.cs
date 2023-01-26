@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -101,6 +101,7 @@ public class bulletHellSpawner : MonoBehaviour
         {
             foreach (Transform child in transform)
             {
+                if(child.GetComponent<ParticleSystem>()){
                 system = child.GetComponent<ParticleSystem>();
                 // Any parameters we assign in emitParams will override the current system's when we call Emit.
                 // Here we will override the start color and size.
@@ -109,6 +110,7 @@ public class bulletHellSpawner : MonoBehaviour
                 emitParams.startSize = size;
                 emitParams.startLifetime = lifetime;
                 system.Emit(emitParams, 10);
+                }
             }
         }
     }
