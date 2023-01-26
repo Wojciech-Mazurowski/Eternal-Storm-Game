@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class textureChanger : MonoBehaviour
 {
+    public bool isEnemy = false;
     public Sprite idleTexture;
     public Sprite upDownTexture;
     public Sprite backTexture;
@@ -20,8 +21,9 @@ public class textureChanger : MonoBehaviour
 
     void Update()
     {
-        NewPos = transform.position;  
-        Velocity = (NewPos - PrevPos) / Time.fixedDeltaTime; 
+        NewPos = transform.position;
+        Velocity = (NewPos - PrevPos) / Time.fixedDeltaTime;
+        if (isEnemy) { Velocity *= -1; }
         PrevPos = NewPos;  
         if (Mathf.Abs(Velocity.x) > Mathf.Abs(Velocity.y))
         {

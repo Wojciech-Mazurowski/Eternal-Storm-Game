@@ -579,13 +579,14 @@ GameObject:
   - component: {fileID: 1309835692}
   - component: {fileID: 1309835691}
   - component: {fileID: 1309835690}
+  - component: {fileID: 1309835693}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1309835690
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5380,6 +5381,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1309835693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309835688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2386eda520ec143a2c5ecf83987ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1710844151
 GameObject:
   m_ObjectHideFlags: 0
@@ -5400,7 +5413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1710844152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5413,14 +5426,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050a967713d167d4882f5c677f7b5f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  system: {fileID: 0}
-  colums: 50
-  speed: 2
+  system: {fileID: 1309835691}
+  colums: 75
+  speed: 4.5
   texture: {fileID: 21300000, guid: 62ce01ddca719d34ea9648c586a7cc94, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 5
-  firerate: 1
-  size: 0.2
+  firerate: 1.4
+  size: 0.3
   angle: 180
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: 0
@@ -5504,10 +5517,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220ae8eb1d20ef043b19695476b71a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  size: 1
+  speed: 7.5
+  size: 0.7
   movementBoxCenter: {fileID: 526789566}
   movementXLimit: 3
+  pickUpSpeedRate: 1.0005
   movementYLimit: 5
   standByTime: 1
 --- !u!114 &1710844157

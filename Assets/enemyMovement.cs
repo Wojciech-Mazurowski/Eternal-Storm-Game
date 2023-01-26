@@ -9,9 +9,11 @@ public class enemyMovement : MonoBehaviour
     public float size;
     public GameObject movementBoxCenter;
     public int movementXLimit;
+    public float pickUpSpeedRate = 0;//0 - default
     public int movementYLimit;
     public float standByTime;
     private Vector3 targetPosition;
+   
 
     private float timer;
 
@@ -32,6 +34,7 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            speed += speed*pickUpSpeedRate/10000;
             var step =  speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
             if (Vector3.Distance(transform.position, targetPosition) < 0.001f){
