@@ -19,21 +19,15 @@ public class mainCharacterMovement : MonoBehaviour
     public Sprite emptyHeart;
     public List<ParticleCollisionEvent> collisionEvents;
 
-    public void SaveFile()
+    public async void SaveFile()
     {
         string destination = Application.persistentDataPath + "/save.dat";
-        FileStream file;
 
-        if (File.Exists(destination)) file = File.OpenWrite(destination);
-        else file = File.Create(destination);
-
-      
-        BinaryFormatter bf = new BinaryFormatter();
-        bf.Serialize(file, "1234324324%");
-        bf.Serialize(file, "934324324%");
-        bf.Serialize(file, "134234%");
-        bf.Serialize(file, "1234%");
-        file.Close();
+        using StreamWriter file = new(destination, append: true);
+        await file.WriteLineAsync("21423141234");
+        await file.WriteLineAsync("123123213");
+        await file.WriteLineAsync("12323");
+        await file.WriteLineAsync("122");
     }
     // Start is called before the first frame update
     void Start()
