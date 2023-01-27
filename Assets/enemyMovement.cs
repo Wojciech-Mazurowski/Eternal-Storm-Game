@@ -53,32 +53,33 @@ public class enemyMovement : MonoBehaviour
     {
             var step =  speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-            if (Vector3.Distance(transform.position, targetPosition) < 0.001f){  
+        var generators = GetComponents<bullethellSystem>();
+        if (Vector3.Distance(transform.position, targetPosition) < 0.001f){  
                 if(timer==0){
-                    currentBulletGenerator = new GameObject("bulletHellPlaceholder");
-                    currentBulletGenerator.transform.position = this.transform.position;
-                    bulletSystem = currentBulletGenerator.AddComponent<bulletHellSpawner>();
-                    bulletSystem.Initialize(columns,bulletSpeed,texture,color,lifetime,firerate,bulletSize,angle,material,spinSpeed,false,desiredLayers,space);
-                    bulletSystem.isShooting = true;
+               
+                foreach (var generator in generators)
+                {
+                    generator.PlaceBulletHellGenerator();
                 }
+            }
                 transform.position = targetPosition;
                 timer += Time.deltaTime;
-                //this.GetComponent<bulletHellSpawner>().isShooting = true;
+            //place generator
+            
                 if(timer > standByTime){
-                   // this.GetComponent<bulletHellSpawner>().isShooting = false;
+                Debug.Log("AAAA");
                     timer=0;
                     targetPosition = GetPositionInsideMovementBox();
-                    bulletSystem.isShooting = false;
-                    StartCoroutine(showStageAnnouncerFor(10));
+                    transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+                foreach (var generator in generators)
+                {
+                    generator.DestroyBulletHellGenerator();
+                }
+
             }
         }
     }
 
     
-    IEnumerator showStageAnnouncerFor(float timeBeforeHidden) //time in seconds
-    {
-        yield return new WaitForSeconds(timeBeforeHidden);
-            Destroy(currentBulletGenerator);
-        yield return null;
-    }
+    
 }
