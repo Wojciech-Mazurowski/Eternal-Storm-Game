@@ -28,7 +28,7 @@ public static class scoreManager
     {
         if (timerStarted)
         {
-            var score_display = score / (Time.time - startTime);
+            int score_display = (int) (score / (Time.time - startTime)*100000);
             scoreText.text = score_display.ToString();
         }
     }
