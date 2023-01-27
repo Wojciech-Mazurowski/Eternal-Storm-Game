@@ -20,6 +20,7 @@ public class bullethellSystem : MonoBehaviour
     public ParticleSystemSimulationSpace space;
     public GameObject parentObject;
     public int stage;
+    public Vector3 spawnOffset;
 
     private bool deletedFlag = true;
 
@@ -36,7 +37,7 @@ public class bullethellSystem : MonoBehaviour
             parentPos.x -= 0.8f;
             currentBulletGenerator.transform.position = parentPos;
             bulletSystem = currentBulletGenerator.AddComponent<bulletHellSpawner>();
-            bulletSystem.Initialize(columns, bulletSpeed, texture, color, lifetime, firerate, bulletSize, angle, material, spinSpeed, false, desiredLayers, space);
+            bulletSystem.Initialize(columns, bulletSpeed, texture, color, lifetime, firerate, bulletSize, angle, material, spinSpeed, false, desiredLayers, space, spawnOffset);
             bulletSystem.isShooting = true;
         }
         else

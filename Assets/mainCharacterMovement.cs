@@ -27,8 +27,6 @@ public class mainCharacterMovement : MonoBehaviour
     {
         var horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         var vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        Debug.Log("X"  + horizontal + this.transform.position.x);
-        Debug.Log("Y" + vertical + this.transform.position.y);
         this.transform.Translate(new Vector3(horizontal, vertical, 0f));
         if(!(horizontal + this.transform.position.x > -8.8))
         {
