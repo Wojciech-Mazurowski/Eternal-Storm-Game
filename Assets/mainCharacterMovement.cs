@@ -8,8 +8,8 @@ public class mainCharacterMovement : MonoBehaviour
 
     public float speed;
     public float size;
-    public int numberOfHearths;
-    public float health;
+    public static int numberOfHearths=4;
+    public static float health=4;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
