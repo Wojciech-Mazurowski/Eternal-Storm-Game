@@ -21,8 +21,8 @@ public class mainCharacterMovement : MonoBehaviour
 
     public async void SaveFile()
     {
-        string destination = Application.persistentDataPath + "/save.dat";
-
+        string destination = Application.persistentDataPath + "/save.txt";
+        Debug.Log(Application.persistentDataPath);
         using StreamWriter file = new(destination, append: true);
         await file.WriteLineAsync("21423141234");
         await file.WriteLineAsync("123123213");

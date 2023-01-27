@@ -12,7 +12,7 @@ public class ScoresLoader : MonoBehaviour
 
     public void LoadFile()
     {
-        string destination = Application.persistentDataPath + "/save.dat";
+        string destination = Application.persistentDataPath + "/save.txt";
         FileStream file;
 
         if (File.Exists(destination)) file = File.OpenRead(destination);
@@ -22,11 +22,8 @@ public class ScoresLoader : MonoBehaviour
             return;
         }
 
-        BinaryFormatter bf = new BinaryFormatter();
-        string data = (string)bf.Deserialize(file);
-        file.Close();
-
-        Debug.Log(data);
+       
+        //Debug.Log(data);
     }
 
     // Start is called before the first frame update
