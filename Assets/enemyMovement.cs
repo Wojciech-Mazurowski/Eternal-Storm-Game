@@ -79,7 +79,7 @@ public class enemyMovement : MonoBehaviour
                     timer=0;
                     targetPosition = GetPositionInsideMovementBox();
                     transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-                var generators = GetComponents<bullethellSystem>();
+                var generators = GetComponentsInChildren<bullethellSystem>();
                 foreach (var generator in generators)
                 {
                     generator.DestroyBulletHellGenerator(stage);
