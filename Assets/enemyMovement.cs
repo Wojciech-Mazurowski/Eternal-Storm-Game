@@ -61,7 +61,6 @@ public class enemyMovement : MonoBehaviour
                     bulletSystem.Initialize(columns,bulletSpeed,texture,color,lifetime,firerate,bulletSize,angle,material,spinSpeed,false,desiredLayers,space);
                     bulletSystem.isShooting = true;
                 }
-
                 transform.position = targetPosition;
                 timer += Time.deltaTime;
                 //this.GetComponent<bulletHellSpawner>().isShooting = true;
