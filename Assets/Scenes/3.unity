@@ -6359,7 +6359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  size: 0.2
+  size: 1
   hearts:
   - {fileID: 142634717}
   - {fileID: 954411187}
@@ -6723,7 +6723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 5
   bulletSpeed: 5
-  texture: {fileID: -494365301, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
   firerate: 0.15
@@ -6751,11 +6751,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   columns: 5
-  bulletSpeed: 5
-  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  bulletSpeed: 10
+  texture: {fileID: 1782186986, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
-  firerate: 0.15
+  firerate: 0.3
   bulletSize: 0.6
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: -60
@@ -6781,13 +6781,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 8
   bulletSpeed: 10
-  texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  texture: {fileID: 73157038, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
   firerate: 0.4
   bulletSize: 2
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 100
+  spinSpeed: 300
   timeToDestroy: 100
   desiredLayers:
     serializedVersion: 2

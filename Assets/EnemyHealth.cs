@@ -25,7 +25,8 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hp>0 && stages>1){
+        scoreManager.Update();
+        if (hp>0 && stages>1){
         upperBar.fillAmount = hp / maxHp;
         underBar.fillAmount = 1;
         }else if(hp>0){
@@ -42,7 +43,8 @@ public class EnemyHealth : MonoBehaviour
 
     void DecrementHp(int damage){
         hp-=damage;
-        if(hp<0&&stages==0){
+        scoreManager.Increment(damage); // Increment score by damage taken  
+        if (hp<0&&stages==0){
             //Get current scene name and increment it
             var currentScene = SceneManager.GetActiveScene().name;
             var sceneNumber = int.Parse(currentScene);
