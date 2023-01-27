@@ -40,7 +40,7 @@ public class scroller : MonoBehaviour
         lastSeenStage = stage;
         var newStage = (maxStages - stage);
         scrollTo = (endPosition / maxStages) * newStage;
-        stageNumberUIText.text = ""+newStage;
+        stageNumberUIText.text = ""+newStage+1;
         StartCoroutine(showStageAnnouncerFor(2.5f));
     }
 
