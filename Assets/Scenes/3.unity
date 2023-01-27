@@ -6544,7 +6544,7 @@ GameObject:
   - component: {fileID: 1710844162}
   - component: {fileID: 1710844163}
   m_Layer: 3
-  m_Name: testEnemy
+  m_Name: Satan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6631,7 +6631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  size: 1
+  size: 0.5
   movementBoxCenter: {fileID: 1694710559}
   movementXLimit: 3
   movementYLimit: 5
@@ -6663,10 +6663,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f32fbe1616374419f51acf0912fbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTexture: {fileID: 21300000, guid: f552e263ae15ed444ad1da85097f0c1c, type: 3}
-  upDownTexture: {fileID: 21300000, guid: 6721e0d186627904ea7923ba9bed9dc8, type: 3}
-  backTexture: {fileID: 21300000, guid: 8be9d3bd044adba4c90cd525f6823156, type: 3}
-  forwardTexture: {fileID: 21300000, guid: b97f30c81437a22469fdcc1bf5d8e851, type: 3}
+  idleTexture: {fileID: 21300000, guid: e825f387a1dbbf84d9ac4ae8bd3b89f6, type: 3}
+  upDownTexture: {fileID: 21300000, guid: 73fe330519d24cb408e15376ffef73c1, type: 3}
+  backTexture: {fileID: 21300000, guid: 64595dcaa3c792a44b0cf5f00b70cca3, type: 3}
+  forwardTexture: {fileID: 21300000, guid: 1a207ca8347b32c409d5708b1446309e, type: 3}
 --- !u!114 &1710844159
 MonoBehaviour:
   m_ObjectHideFlags: 0
