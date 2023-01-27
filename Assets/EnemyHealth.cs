@@ -37,15 +37,18 @@ public class EnemyHealth : MonoBehaviour
             hp=maxHp;
             var enemy = this.GetComponent<enemyMovement>();
             enemy.StartMoving();
-        }else if(hp < 0 ){
-            //todo go to new area/boss
         }
     }
 
     void DecrementHp(int damage){
         hp-=damage;
         if(hp<0&&stages==0){
-            SceneManager.LoadScene("MainMenuScene");  
+            //Get current scene name and increment it
+            var currentScene = SceneManager.GetActiveScene().name;
+            var sceneNumber = int.Parse(currentScene);
+            var nextScene = (sceneNumber + 1);
+            //Load next scene
+            SceneManager.LoadScene(""+nextScene);
         }
     }
 
