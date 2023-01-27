@@ -7,6 +7,7 @@ public class saveScore : MonoBehaviour
 {
     public async void SaveFile()
     {
+        scoreManager.Update();
         string destination = Application.persistentDataPath + "/save.txt";
         Debug.Log(Application.persistentDataPath);
         using StreamWriter file = new(destination, append: true);
