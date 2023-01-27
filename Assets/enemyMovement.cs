@@ -30,6 +30,7 @@ public class enemyMovement : MonoBehaviour
     public float time;
     public LayerMask desiredLayers;
     public ParticleSystemSimulationSpace space;
+    private float maxStandByTime;
 
     private bulletHellSpawner bulletSystem;
     private GameObject currentBulletGenerator;
@@ -46,34 +47,41 @@ public class enemyMovement : MonoBehaviour
         var localScale = transform.localScale;
         transform.localScale = new Vector3(localScale.x * size, localScale.y * size, localScale.z);
         targetPosition = GetPositionInsideMovementBox();
+        maxStandByTime = standByTime;
+    }
+
+    public void StartMoving()
+    {
+        standByTime = -5;
     }
 
     // Update is called once per frame
     void Update()
     {
+        var stage = this.GetComponent<EnemyHealth>().stages;
             var step =  speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-        var generators = GetComponents<bullethellSystem>();
+       
         if (Vector3.Distance(transform.position, targetPosition) < 0.001f){  
                 if(timer==0){
-               
+                var generators = GetComponents<bullethellSystem>();
                 foreach (var generator in generators)
                 {
-                    generator.PlaceBulletHellGenerator();
+                    generator.PlaceBulletHellGenerator(stage);
                 }
             }
                 transform.position = targetPosition;
                 timer += Time.deltaTime;
-            //place generator
             
                 if(timer > standByTime){
-                Debug.Log("AAAA");
+                    standByTime = maxStandByTime;
                     timer=0;
                     targetPosition = GetPositionInsideMovementBox();
                     transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+                var generators = GetComponents<bullethellSystem>();
                 foreach (var generator in generators)
                 {
-                    generator.DestroyBulletHellGenerator();
+                    generator.DestroyBulletHellGenerator(stage);
                 }
 
             }

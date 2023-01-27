@@ -6329,9 +6329,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21, y: 0.3}
+  m_Offset: {x: 0.21, y: 0.33}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.15
 --- !u!114 &1300428953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6406,6 +6406,7 @@ GameObject:
   - component: {fileID: 1710844160}
   - component: {fileID: 1710844161}
   - component: {fileID: 1710844162}
+  - component: {fileID: 1710844163}
   m_Layer: 3
   m_Name: testEnemy
   m_TagString: Untagged
@@ -6508,7 +6509,7 @@ MonoBehaviour:
   firerate: 0.15
   bulletSize: 0.5
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 20
+  spinSpeed: -20
   time: 0
   desiredLayers:
     serializedVersion: 2
@@ -6586,19 +6587,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 5
   bulletSpeed: 5
-  texture: {fileID: 21300000, guid: d6a44ab95b0def041a7929981a2c23a1, type: 3}
+  texture: {fileID: -494365301, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
   firerate: 0.15
-  bulletSize: 0.5
+  bulletSize: 0.6
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 50
-  timeToDestroy: 100
+  spinSpeed: 60
+  timeToDestroy: 30
   desiredLayers:
     serializedVersion: 2
     m_Bits: 1
   space: 1
   parentObject: {fileID: 1710844151}
+  stage: 5
 --- !u!114 &1710844162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6613,19 +6615,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 5
   bulletSpeed: 5
-  texture: {fileID: 21300000, guid: d6a44ab95b0def041a7929981a2c23a1, type: 3}
+  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
   firerate: 0.15
-  bulletSize: 0.5
+  bulletSize: 0.6
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: -50
+  spinSpeed: -60
   timeToDestroy: 100
   desiredLayers:
     serializedVersion: 2
     m_Bits: 1
   space: 1
   parentObject: {fileID: 1710844151}
+  stage: 4
+--- !u!114 &1710844163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710844151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ee311e2bb83c449b9fdf0289298439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 8
+  bulletSpeed: 10
+  texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lifetime: 10
+  firerate: 0.4
+  bulletSize: 2
+  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  spinSpeed: 100
+  timeToDestroy: 100
+  desiredLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  space: 1
+  parentObject: {fileID: 1710844151}
+  stage: 3
 --- !u!1 &1785564037
 GameObject:
   m_ObjectHideFlags: 0

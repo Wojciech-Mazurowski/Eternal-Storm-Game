@@ -35,6 +35,8 @@ public class EnemyHealth : MonoBehaviour
         if(hp<0 && stages>0){
             stages--;
             hp=maxHp;
+            var enemy = this.GetComponent<enemyMovement>();
+            enemy.StartMoving();
         }else if(hp < 0 ){
             //todo go to new area/boss
         }

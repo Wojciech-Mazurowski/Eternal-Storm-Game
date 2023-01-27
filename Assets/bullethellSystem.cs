@@ -19,24 +19,41 @@ public class bullethellSystem : MonoBehaviour
     public LayerMask desiredLayers;
     public ParticleSystemSimulationSpace space;
     public GameObject parentObject;
+    public int stage;
+
+    private bool deletedFlag = true;
 
     private bulletHellSpawner bulletSystem;
     private GameObject currentBulletGenerator;
     // Start is called before the first frame update
-    public void PlaceBulletHellGenerator()
+    public void PlaceBulletHellGenerator(int parentStage)
     {
-        currentBulletGenerator = new GameObject("bulletHellPlaceholder");
-        currentBulletGenerator.transform.position = parentObject.transform.position;
-        bulletSystem = currentBulletGenerator.AddComponent<bulletHellSpawner>();
-        bulletSystem.Initialize(columns, bulletSpeed, texture, color, lifetime, firerate, bulletSize, angle, material, spinSpeed, false, desiredLayers, space);
-        bulletSystem.isShooting = true;
+        if (parentStage == stage)
+        {
+            deletedFlag = true;
+            currentBulletGenerator = new GameObject("bulletHellPlaceholder");
+            currentBulletGenerator.transform.position = parentObject.transform.position;
+            bulletSystem = currentBulletGenerator.AddComponent<bulletHellSpawner>();
+            bulletSystem.Initialize(columns, bulletSpeed, texture, color, lifetime, firerate, bulletSize, angle, material, spinSpeed, false, desiredLayers, space);
+            bulletSystem.isShooting = true;
+        }
+        else
+        {
+            deletedFlag = true;
+        }
     }
 
     // Update is called once per frame
-    public void DestroyBulletHellGenerator()
+    public void DestroyBulletHellGenerator(int parentStage)
     {
-        bulletSystem.isShooting = false;
-        StartCoroutine(showStageAnnouncerFor(40));
+        if (deletedFlag)
+        {
+            if (bulletSystem) { 
+            bulletSystem.isShooting = false;
+            }
+            StartCoroutine(showStageAnnouncerFor(40));
+            deletedFlag = false;
+        }
     }
 
     IEnumerator showStageAnnouncerFor(float timeBeforeHidden) //time in seconds
