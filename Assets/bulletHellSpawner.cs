@@ -22,7 +22,10 @@ public class bulletHellSpawner : MonoBehaviour
     public LayerMask desiredLayers;
     public ParticleSystemSimulationSpace space;
 
-    public void Initialize(int columns, float speed, Sprite texture, Color color, float lifetime, float firerate, float size, float angle, Material material, float spinSpeed, bool isShooting, LayerMask desiredLayers, ParticleSystemSimulationSpace space){
+    public Vector3 spawnOffset= Vector3.zero;
+
+    public void Initialize(int columns, float speed, Sprite texture, Color color, float lifetime, float firerate, float size, float angle, Material material, float spinSpeed, bool isShooting, LayerMask desiredLayers, ParticleSystemSimulationSpace space, Vector3 spawnOffset)
+    {
        this.columns = columns;
        this.speed = speed;
        this.texture = texture;
@@ -36,6 +39,7 @@ public class bulletHellSpawner : MonoBehaviour
        this.isShooting = isShooting;
        this.desiredLayers = desiredLayers;
        this.space = space;
+        this.spawnOffset = spawnOffset;
        StartFire();
     }
     
@@ -62,7 +66,7 @@ public class bulletHellSpawner : MonoBehaviour
             var go = new GameObject("Particle System");
             go.transform.Rotate(angle * i, 90, 0);
             go.transform.parent = this.transform;
-            var pos = this.transform.position;    
+            var pos = this.transform.position + spawnOffset;    
             go.transform.position = pos;
             system = go.AddComponent<ParticleSystem>();
             go.GetComponent<ParticleSystemRenderer>().material = particleMaterial;

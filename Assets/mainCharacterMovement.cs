@@ -1,69 +1,93 @@
-using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; 
 
 public class mainCharacterMovement : MonoBehaviour
 {
 
     public float speed;
     public float size;
-    public int numberOfHearths;
-    public float health;
+    public static int numberOfHearths=4;
+    public static float health=4;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
-    public List<ParticleCollisionEvent> collisionEvents; 
-    public 
-        
+    public List<ParticleCollisionEvent> collisionEvents;
+
     // Start is called before the first frame update
     void Start()
     {
         var localScale = transform.localScale;
-        transform.localScale = new Vector3(localScale.x*size,localScale.y*size,localScale.z);
+        transform.localScale = new Vector3(localScale.x * size, localScale.y * size, localScale.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(
-            Input.GetAxis("Horizontal") * speed * Time.deltaTime,
-            Input.GetAxis("Vertical") * speed * Time.deltaTime, 0f);
+        var horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        var vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        this.transform.Translate(new Vector3(horizontal, vertical, 0f));
+        if(!(horizontal + this.transform.position.x > -8.8))
+        {
+            this.transform.Translate(new Vector3(-horizontal, vertical, 0f));
+        }
+         if (!(this.transform.position.y > -5))
+        {
+            transform.position = new Vector3(this.transform.position.x, 4.8f, 0f); 
+        } 
+         if (!(vertical + this.transform.position.y < 5))
+        {
+            transform.position = new Vector3(this.transform.position.x, -4.8f, 0f);
+        }
+       
 
-        if(Input.GetKey("z")){
+        if (Input.GetKey("z"))
+        {
             this.GetComponent<bulletHellSpawner>().isShooting = true;
-        }else{
+        }
+        else
+        {
             this.GetComponent<bulletHellSpawner>().isShooting = false;
         }
 
-        if(health > numberOfHearths){
+        if (health > numberOfHearths)
+        {
             health = numberOfHearths;
         }
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i < health){
+            if (i < health)
+            {
                 hearts[i].sprite = fullHeart;
-            }else{
+            }
+            else
+            {
                 hearts[i].sprite = emptyHeart;
             }
-            if(i < numberOfHearths){
+            if (i < numberOfHearths)
+            {
                 hearts[i].enabled = true;
-            }else{
+            }
+            else
+            {
                 hearts[i].enabled = false;
             }
         }
     }
 
-    public void DecrementHp(){
+    public void DecrementHp()
+    {
         health -= 1f;
-        if(health==0){
-             // SceneManager.LoadScene("MainMenuScene");  
+        if (health == 0)
+        {
+            // SceneManager.LoadScene("MainMenuScene");  
         }
     }
 
-    private void OnParticleCollision(GameObject other) {
+    private void OnParticleCollision(GameObject other)
+    {
         DecrementHp();
     }
 }
