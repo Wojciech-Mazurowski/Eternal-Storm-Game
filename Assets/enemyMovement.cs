@@ -64,7 +64,8 @@ public class enemyMovement : MonoBehaviour
        
         if (Vector3.Distance(transform.position, targetPosition) < 0.001f){  
                 if(timer==0){
-                var generators = GetComponents<bullethellSystem>();
+                var generators = GetComponentsInChildren<bullethellSystem>();
+
                 foreach (var generator in generators)
                 {
                     generator.PlaceBulletHellGenerator(stage);
