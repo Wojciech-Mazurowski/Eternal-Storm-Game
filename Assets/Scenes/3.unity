@@ -6447,10 +6447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f32fbe1616374419f51acf0912fbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTexture: {fileID: 21300000, guid: 438f0648a23cf3945bf2688fdb7c2053, type: 3}
-  upDownTexture: {fileID: 21300000, guid: bd42079e26954a1448b21b7c3ffbb7f3, type: 3}
-  backTexture: {fileID: 21300000, guid: cd13b6abd92472c429b3361f83dbe7ba, type: 3}
-  forwardTexture: {fileID: 21300000, guid: 8e7db2ba919f0cf428f3c31ed3110c7f, type: 3}
+  idleTexture: {fileID: 21300000, guid: b6de8e30e050f5c4a83a1544d55c20d8, type: 3}
+  upDownTexture: {fileID: 21300000, guid: 0b8d39bc1c2800a469dcd2523ba6606b, type: 3}
+  backTexture: {fileID: 21300000, guid: 2e77965a9b4e80147a0d730a05951898, type: 3}
+  forwardTexture: {fileID: 21300000, guid: f9bcbe0b1bab67a42a1c3b0b9727933e, type: 3}
 --- !u!58 &1300428952
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7027,7 +7027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794250091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.7, y: 0, z: 7.9681015}
+  m_LocalPosition: {x: 1.4, y: 0, z: 7.9681015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
