@@ -38,12 +38,12 @@ public class scroller : MonoBehaviour
     void SetStage(int stage, int maxStages)
     {
         lastSeenStage = stage;
-        var newStage = (maxStages - stage) + 1;
+        var newStage = (maxStages - stage);
         scrollTo = (endPosition / maxStages) * newStage;
         stageNumberUIText.text = ""+newStage;
-        x = (endPosition / maxStages) * (newStage-1);
         StartCoroutine(showStageAnnouncerFor(2.5f));
     }
+
 
     IEnumerator showStageAnnouncerFor(float timeBeforeHidden) //time in seconds
     {
