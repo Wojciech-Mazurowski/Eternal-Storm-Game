@@ -41,6 +41,7 @@ public class scroller : MonoBehaviour
         var newStage = (maxStages - stage) + 1;
         scrollTo = (endPosition / maxStages) * newStage;
         stageNumberUIText.text = ""+newStage;
+        x = (endPosition / maxStages) * (newStage-1);
         StartCoroutine(showStageAnnouncerFor(2.5f));
     }
 
