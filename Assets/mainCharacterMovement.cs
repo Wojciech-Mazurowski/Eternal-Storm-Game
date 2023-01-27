@@ -19,22 +19,12 @@ public class mainCharacterMovement : MonoBehaviour
     public Sprite emptyHeart;
     public List<ParticleCollisionEvent> collisionEvents;
 
-    public async void SaveFile()
-    {
-        string destination = Application.persistentDataPath + "/save.txt";
-        Debug.Log(Application.persistentDataPath);
-        using StreamWriter file = new(destination, append: true);
-        await file.WriteLineAsync("21423141234");
-        await file.WriteLineAsync("123123213");
-        await file.WriteLineAsync("12323");
-        await file.WriteLineAsync("122");
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
         var localScale = transform.localScale;
         transform.localScale = new Vector3(localScale.x * size, localScale.y * size, localScale.z);
-        SaveFile();
     }
 
     // Update is called once per frame

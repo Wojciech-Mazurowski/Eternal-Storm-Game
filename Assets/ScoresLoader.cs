@@ -29,14 +29,14 @@ public class ScoresLoader : MonoBehaviour
             linesNum.Add(Int64.Parse(line));
         }
 
-        linesNum.OrderByDescending(i => i);
+        var xd = linesNum.OrderByDescending(i => i).ToList();
 
         var mid = Math.Min(textMeshProUGUIs.Count, linesNum.Count);
         for(int i= 0; i<mid; i++)
         {
             Debug.Log(mid);
             textMeshProUGUIs[i].enabled = true;
-            textMeshProUGUIs[i].text = linesNum[i].ToString();
+            textMeshProUGUIs[i].text = xd[i].ToString();
         }
     }
 

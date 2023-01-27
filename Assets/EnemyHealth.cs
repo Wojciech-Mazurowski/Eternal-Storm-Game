@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using System.IO;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -39,6 +40,14 @@ public class EnemyHealth : MonoBehaviour
             var enemy = this.GetComponent<enemyMovement>();
             enemy.StartMoving();
         }
+    }
+    public async void SaveFile(string score)
+    {
+        string destination = Application.persistentDataPath + "/save.txt";
+        Debug.Log(Application.persistentDataPath);
+        using StreamWriter file = new(destination, append: true);
+        await file.WriteLineAsync(score);
+
     }
 
     void DecrementHp(int damage){
