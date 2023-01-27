@@ -32,7 +32,9 @@ public class bullethellSystem : MonoBehaviour
         {
             deletedFlag = true;
             currentBulletGenerator = new GameObject("bulletHellPlaceholder");
-            currentBulletGenerator.transform.position = parentObject.transform.position;
+            var parentPos = parentObject.transform.position;
+            parentPos.x -= 0.8f;
+            currentBulletGenerator.transform.position = parentPos;
             bulletSystem = currentBulletGenerator.AddComponent<bulletHellSpawner>();
             bulletSystem.Initialize(columns, bulletSpeed, texture, color, lifetime, firerate, bulletSize, angle, material, spinSpeed, false, desiredLayers, space);
             bulletSystem.isShooting = true;
