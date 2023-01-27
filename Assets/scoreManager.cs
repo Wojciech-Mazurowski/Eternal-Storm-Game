@@ -26,8 +26,11 @@ public static class scoreManager
     }
     public static void Update()
     {
+
         if (timerStarted)
         {
+            var scoreObject = GameObject.FindGameObjectsWithTag("scoreText")[0];
+            scoreText = scoreObject.GetComponent<TextMeshProUGUI>();
             int score_display = (int) (score / (Time.time - startTime)*100000);
             scoreText.text = score_display.ToString();
         }
