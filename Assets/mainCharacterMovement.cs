@@ -19,24 +19,6 @@ public class mainCharacterMovement : MonoBehaviour
     public Sprite emptyHeart;
     public List<ParticleCollisionEvent> collisionEvents;
 
-    public void LoadFile()
-    {
-        string destination = Application.persistentDataPath + "/save.dat";
-        FileStream file;
-
-        if (File.Exists(destination)) file = File.OpenRead(destination);
-        else
-        {
-            Debug.LogError("File not found");
-            return;
-        }
-
-        BinaryFormatter bf = new BinaryFormatter();
-        string data = (string)bf.Deserialize(file);
-        file.Close();
-
-        Debug.Log(data);
-    }
     public void SaveFile()
     {
         string destination = Application.persistentDataPath + "/save.dat";
@@ -47,7 +29,10 @@ public class mainCharacterMovement : MonoBehaviour
 
       
         BinaryFormatter bf = new BinaryFormatter();
-        bf.Serialize(file, "134234");
+        bf.Serialize(file, "1234324324%");
+        bf.Serialize(file, "934324324%");
+        bf.Serialize(file, "134234%");
+        bf.Serialize(file, "1234%");
         file.Close();
     }
     // Start is called before the first frame update
@@ -56,7 +41,6 @@ public class mainCharacterMovement : MonoBehaviour
         var localScale = transform.localScale;
         transform.localScale = new Vector3(localScale.x * size, localScale.y * size, localScale.z);
         SaveFile();
-        LoadFile();
     }
 
     // Update is called once per frame
