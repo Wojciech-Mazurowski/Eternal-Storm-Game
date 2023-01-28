@@ -8,8 +8,8 @@ public class enemyMovement : MonoBehaviour
     public float speed;
     public float size;
     public GameObject movementBoxCenter;
-    public int movementXLimit;
-    public int movementYLimit;
+    public float movementXLimit;
+    public float movementYLimit;
     public float standByTime;
     private Vector3 targetPosition;
 
