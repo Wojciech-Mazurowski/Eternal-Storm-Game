@@ -6521,7 +6521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1710844151}
-  stageNumberUIText: {fileID: 0}
+  stageNumberUIText: {fileID: 92755583}
   stageAnnouncerUI: {fileID: 1006642431}
   maxStages: 0
   scrollSpeed: 2
