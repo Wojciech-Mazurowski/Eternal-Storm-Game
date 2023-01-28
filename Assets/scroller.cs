@@ -1,8 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class scroller : MonoBehaviour
 {
@@ -38,9 +39,18 @@ public class scroller : MonoBehaviour
     void SetStage(int stage, int maxStages)
     {
         lastSeenStage = stage;
-        var newStage = (maxStages - stage)-1;
+        var newStage = (maxStages - stage);
+        var currentScene = SceneManager.GetActiveScene().name;
+        var sceneNumber = int.Parse(currentScene);
         scrollTo = startPosition/2+(endPosition / maxStages) * newStage;
-        stageNumberUIText.text = ""+newStage+1;
+
+        string[] madrosci = new string[]{
+            "Wiele żółwi żyło na tej ziemi",
+            "Nie ma sceny zero ale jest bo tak",
+            "Wielcy mędrcy są wielicy",
+        };
+
+        stageNumberUIText.text = $"Chapter {sceneNumber} - {madrosci[sceneNumber-1]}\nStage {newStage + 1}";
         StartCoroutine(showStageAnnouncerFor(2.5f));
     }
 
