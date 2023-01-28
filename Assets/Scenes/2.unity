@@ -245,8 +245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 10
   bulletSpeed: 2.5
-  texture: {fileID: -259023419, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 0.40921968, g: 1, b: 0.2783019, a: 1}
+  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 0.22801706, g: 0.7924528, b: 0.6483416, a: 1}
   lifetime: 15
   firerate: 0.3
   bulletSize: 0.5
@@ -5751,7 +5751,7 @@ MonoBehaviour:
   columns: 5
   bulletSpeed: 2.5
   texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 1, g: 0, b: 0, a: 1}
+  color: {r: 0, g: 0.42763233, b: 1, a: 1}
   lifetime: 15
   firerate: 0.3
   bulletSize: 0.5
@@ -6872,7 +6872,7 @@ MonoBehaviour:
     m_Bits: 1
   space: 1
   parentObject: {fileID: 0}
-  stage: 1
+  stage: 2
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1417648384
 GameObject:
