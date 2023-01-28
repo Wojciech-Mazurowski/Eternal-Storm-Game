@@ -7307,7 +7307,7 @@ MonoBehaviour:
   texture: {fileID: 73157038, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 0, b: 0, a: 1}
   lifetime: 15
-  firerate: 0.3
+  firerate: 0.4
   bulletSize: 0.5
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: 100
