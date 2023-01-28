@@ -7024,8 +7024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56d83258397cd349931e017c4815091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
-  stages: 5
+  hp: 700
+  stages: 4
   upperBar: {fileID: 23345493}
   underBar: {fileID: 103710685}
 --- !u!61 &1710844160
