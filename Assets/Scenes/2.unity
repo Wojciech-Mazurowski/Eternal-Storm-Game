@@ -209,8 +209,9 @@ GameObject:
   m_Component:
   - component: {fileID: 37313335}
   - component: {fileID: 37313336}
+  - component: {fileID: 37313337}
   m_Layer: 3
-  m_Name: SimpleSpin(easy) (1)
+  m_Name: spin + circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +230,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1578632836}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &37313336
 MonoBehaviour:
@@ -251,7 +252,36 @@ MonoBehaviour:
   firerate: 0.3
   bulletSize: 0.5
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 45
+  spinSpeed: 65
+  timeToDestroy: 100
+  desiredLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  space: 1
+  parentObject: {fileID: 1710844151}
+  stage: 3
+  spawnOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &37313337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37313334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ee311e2bb83c449b9fdf0289298439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 20
+  bulletSpeed: 2.5
+  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 0.10980393, g: 0.30588236, b: 0.37254903, a: 1}
+  lifetime: 15
+  firerate: 0.3
+  bulletSize: 0.5
+  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  spinSpeed: 0
   timeToDestroy: 100
   desiredLayers:
     serializedVersion: 2
@@ -5733,7 +5763,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1578632836}
+  m_Father: {fileID: 1433769271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &518001961
@@ -5763,7 +5793,7 @@ MonoBehaviour:
     m_Bits: 1
   space: 1
   parentObject: {fileID: 1710844151}
-  stage: 3
+  stage: 2
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -5994,7 +6024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838740177}
   m_Layer: 3
-  m_Name: Stage4
+  m_Name: Stage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6012,9 +6042,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1742697294}
+  - {fileID: 1401864221}
   m_Father: {fileID: 1710844155}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &920342902
 GameObject:
@@ -6299,7 +6329,7 @@ RectTransform:
   m_GameObject: {fileID: 1059201770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.007435303, y: 0.007435303, z: 0.007435303}
+  m_LocalScale: {x: 0.0090785045, y: 0.0090785045, z: 0.0090785045}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 103710684}
@@ -6309,7 +6339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.6, y: 0.0000000037253}
+  m_AnchoredPosition: {x: -0.07, y: -0.05}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059201772
@@ -6799,13 +6829,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401864220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1710844155}
-  m_RootOrder: 2
+  m_Father: {fileID: 838740177}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1401864222
 MonoBehaviour:
@@ -6822,7 +6852,7 @@ MonoBehaviour:
   columns: 4
   bulletSpeed: 2.5
   texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 0.09292316, g: 0.4245283, b: 0, a: 1}
+  color: {r: 0.1137255, g: 0.3254902, b: 0.38431376, a: 1}
   lifetime: 15
   firerate: 0.15
   bulletSize: 0.6
@@ -6833,7 +6863,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   space: 1
-  parentObject: {fileID: 0}
+  parentObject: {fileID: 1710844151}
   stage: 1
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1401864223
@@ -6851,7 +6881,7 @@ MonoBehaviour:
   columns: 4
   bulletSpeed: 2.5
   texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 1, g: 0, b: 0, a: 1}
+  color: {r: 0.10196079, g: 0.78823537, b: 0.7607844, a: 1}
   lifetime: 15
   firerate: 0.15
   bulletSize: 0.6
@@ -6862,8 +6892,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   space: 1
-  parentObject: {fileID: 0}
-  stage: 2
+  parentObject: {fileID: 1710844151}
+  stage: 1
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1417648384
 GameObject:
@@ -6968,6 +6998,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1433769270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1433769271}
+  m_Layer: 3
+  m_Name: Stage 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1433769271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433769270}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 518001960}
+  - {fileID: 1742697294}
+  m_Father: {fileID: 1710844155}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578632835
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,7 +7041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578632836}
   m_Layer: 3
-  m_Name: SimpleSpin+LowSpin
+  m_Name: Stage 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6996,7 +7059,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 518001960}
   - {fileID: 37313335}
   m_Father: {fileID: 1710844155}
   m_RootOrder: 1
@@ -7316,9 +7378,6 @@ GameObject:
   - component: {fileID: 1710844156}
   - component: {fileID: 1710844159}
   - component: {fileID: 1710844160}
-  - component: {fileID: 1710844161}
-  - component: {fileID: 1710844162}
-  - component: {fileID: 1710844163}
   m_Layer: 3
   m_Name: testEnemy
   m_TagString: Untagged
@@ -7392,8 +7451,8 @@ Transform:
   m_Children:
   - {fileID: 1059201771}
   - {fileID: 1578632836}
-  - {fileID: 1401864221}
   - {fileID: 838740177}
+  - {fileID: 1433769271}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7488,93 +7547,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3.6}
   m_EdgeRadius: 0
---- !u!114 &1710844161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710844151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ee311e2bb83c449b9fdf0289298439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  columns: 5
-  bulletSpeed: 5
-  texture: {fileID: -494365301, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  lifetime: 10
-  firerate: 0.15
-  bulletSize: 0.6
-  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 60
-  timeToDestroy: 30
-  desiredLayers:
-    serializedVersion: 2
-    m_Bits: 1
-  space: 1
-  parentObject: {fileID: 1710844151}
-  stage: 5
-  spawnOffset: {x: 0, y: 0, z: 0}
---- !u!114 &1710844162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710844151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ee311e2bb83c449b9fdf0289298439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  columns: 5
-  bulletSpeed: 5
-  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  lifetime: 10
-  firerate: 0.15
-  bulletSize: 0.6
-  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: -60
-  timeToDestroy: 100
-  desiredLayers:
-    serializedVersion: 2
-    m_Bits: 1
-  space: 1
-  parentObject: {fileID: 1710844151}
-  stage: 4
-  spawnOffset: {x: 0, y: 0, z: 0}
---- !u!114 &1710844163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710844151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ee311e2bb83c449b9fdf0289298439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  columns: 8
-  bulletSpeed: 10
-  texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  lifetime: 10
-  firerate: 0.4
-  bulletSize: 2
-  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 100
-  timeToDestroy: 100
-  desiredLayers:
-    serializedVersion: 2
-    m_Bits: 1
-  space: 1
-  parentObject: {fileID: 1710844151}
-  stage: 3
-  spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1742697293
 GameObject:
   m_ObjectHideFlags: 0
@@ -7599,13 +7571,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742697293}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 838740177}
-  m_RootOrder: 0
+  m_Father: {fileID: 1433769271}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1742697295
 MonoBehaviour:
@@ -7621,20 +7593,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 5
   bulletSpeed: 2.5
-  texture: {fileID: -494365301, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 1, g: 0.4292453, b: 0.4292453, a: 1}
+  texture: {fileID: 73157038, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 15
   firerate: 0.3
-  bulletSize: 1.3
+  bulletSize: 2
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  spinSpeed: 60
+  spinSpeed: -45
   timeToDestroy: 100
   desiredLayers:
     serializedVersion: 2
     m_Bits: 1
   space: 1
-  parentObject: {fileID: 0}
-  stage: 6
+  parentObject: {fileID: 1710844151}
+  stage: 2
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1794250091
 GameObject:
