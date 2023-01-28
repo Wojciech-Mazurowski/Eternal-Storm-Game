@@ -70,6 +70,7 @@ public class bulletHellSpawner : MonoBehaviour
             go.transform.position = pos;
             system = go.AddComponent<ParticleSystem>();
             go.GetComponent<ParticleSystemRenderer>().material = particleMaterial;
+            //go.GetComponent<ParticleSystemRenderer>().renderMode = ParticleSystemRenderMode.Stretch;
 
             //Modules section
             var mainModule = system.main;
