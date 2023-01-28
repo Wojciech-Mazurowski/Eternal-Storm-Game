@@ -7098,7 +7098,7 @@ SpriteRenderer:
   m_SortingLayerID: -936223135
   m_SortingLayer: -1
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: f552e263ae15ed444ad1da85097f0c1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f1e31b8862245c4faa1bb25339e7919, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7170,10 +7170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f32fbe1616374419f51acf0912fbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTexture: {fileID: 21300000, guid: f552e263ae15ed444ad1da85097f0c1c, type: 3}
-  upDownTexture: {fileID: 21300000, guid: 6721e0d186627904ea7923ba9bed9dc8, type: 3}
-  backTexture: {fileID: 21300000, guid: 8be9d3bd044adba4c90cd525f6823156, type: 3}
-  forwardTexture: {fileID: 21300000, guid: b97f30c81437a22469fdcc1bf5d8e851, type: 3}
+  idleTexture: {fileID: 21300000, guid: 8f1e31b8862245c4faa1bb25339e7919, type: 3}
+  upDownTexture: {fileID: 21300000, guid: d336f0d9fbbb60c4aa17b27772b25d1c, type: 3}
+  backTexture: {fileID: 21300000, guid: 81d7dbdeb055bcf49818864e349c8a43, type: 3}
+  forwardTexture: {fileID: 21300000, guid: d9820cdb14c3b144fb6e9456fc98150f, type: 3}
 --- !u!114 &1710844159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7207,7 +7207,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.37, y: 3.93}
+    oldSize: {x: 4.77, y: 5.23}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
