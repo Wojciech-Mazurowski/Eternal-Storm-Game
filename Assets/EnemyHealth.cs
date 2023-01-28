@@ -53,7 +53,7 @@ public class EnemyHealth : MonoBehaviour
     void DecrementHp(int damage){
         hp-=damage;
         scoreManager.Increment(damage); // Increment score by damage taken  
-        if (hp<0&&stages==0){
+        if (hp<0&&stages==1){
             //Get current scene name and increment it
             var currentScene = SceneManager.GetActiveScene().name;
             var sceneNumber = int.Parse(currentScene);

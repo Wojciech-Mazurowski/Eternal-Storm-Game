@@ -51,11 +51,12 @@ public class bullethellSystem : MonoBehaviour
     {
         if (deletedFlag)
         {
+            deletedFlag = false;
             if (bulletSystem) { 
             bulletSystem.isShooting = false;
             }
-            StartCoroutine(showStageAnnouncerFor(40));
-            deletedFlag = false;
+           
+
         }
     }
 
