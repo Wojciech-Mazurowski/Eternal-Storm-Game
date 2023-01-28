@@ -229,9 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e18d0526f2f2e4e8404924a703e046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  stageNumberUIText: {fileID: 0}
-  stageAnnouncerUI: {fileID: 0}
+  enemy: {fileID: 1710844151}
+  stageNumberUIText: {fileID: 314791514}
+  stageAnnouncerUI: {fileID: 2135049357}
   maxStages: 0
   scrollSpeed: 2
   scrollTime: 10
@@ -7349,7 +7349,7 @@ MonoBehaviour:
   size: 1
   movementBoxCenter: {fileID: 1694710559}
   movementXLimit: 3
-  movementYLimit: 5
+  movementYLimit: 4.5
   standByTime: 4
   system: {fileID: 0}
   columns: 10
