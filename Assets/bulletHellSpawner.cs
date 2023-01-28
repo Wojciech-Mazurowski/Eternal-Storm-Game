@@ -100,6 +100,8 @@ public class bulletHellSpawner : MonoBehaviour
             collision.sendCollisionMessages = true;
             collision.lifetimeLoss = 100;
             collision.collidesWith = desiredLayers;
+
+            go.GetComponent<ParticleSystemRenderer>().sortingLayerName= "underunder";
         }
         // Every 2 secs we will emit.
         InvokeRepeating("DoEmit", 0f, firerate); // lol
