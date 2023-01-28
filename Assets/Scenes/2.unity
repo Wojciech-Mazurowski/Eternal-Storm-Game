@@ -6229,7 +6229,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1150254769}
   - component: {fileID: 1150254768}
-  - component: {fileID: 1150254767}
   m_Layer: 0
   m_Name: music
   m_TagString: Untagged
@@ -6237,14 +6236,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1150254767
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150254766}
-  m_Enabled: 1
 --- !u!82 &1150254768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6493,7 +6484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  size: 0.2
+  size: 1
   hearts:
   - {fileID: 142634717}
   - {fileID: 954411187}
@@ -6542,7 +6533,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6de8e30e050f5c4a83a1544d55c20d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e7db2ba919f0cf428f3c31ed3110c7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
