@@ -5854,7 +5854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   columns: 3
-  bulletSpeed: 2.5
+  bulletSpeed: 1.7
   texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 0.40921968, g: 1, b: 0.2783019, a: 1}
   lifetime: 15
@@ -6030,6 +6030,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &672604030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 672604031}
+  - component: {fileID: 672604032}
+  m_Layer: 3
+  m_Name: First (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &672604031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672604030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1086655935}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &672604032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672604030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ee311e2bb83c449b9fdf0289298439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 2
+  bulletSpeed: 4
+  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 0, g: 0.8351569, b: 1, a: 1}
+  lifetime: 10
+  firerate: 0.12
+  bulletSize: 0.6
+  material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  spinSpeed: -90
+  timeToDestroy: 30
+  desiredLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  space: 1
+  parentObject: {fileID: 1710844151}
+  stage: 2
+  spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &677630570
 GameObject:
   m_ObjectHideFlags: 0
@@ -6089,7 +6150,7 @@ MonoBehaviour:
     m_Bits: 1
   space: 1
   parentObject: {fileID: 1710844151}
-  stage: 2
+  stage: 3
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &753957632
 GameObject:
@@ -6150,7 +6211,7 @@ MonoBehaviour:
     m_Bits: 1
   space: 1
   parentObject: {fileID: 1710844151}
-  stage: 2
+  stage: 3
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &954411185
 GameObject:
@@ -6519,7 +6580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086655935}
   m_Layer: 3
-  m_Name: Stage 3
+  m_Name: Stage 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6538,6 +6599,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1187336383}
+  - {fileID: 672604031}
   m_Father: {fileID: 1710844155}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6568,9 +6630,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: af3460be287a4f24caa8b3258238a695, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e994d6160e1d0f44c94c236d780c1b19, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.303
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6782,7 +6844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176345971}
   m_Layer: 3
-  m_Name: Stage 2
+  m_Name: Stage 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6850,7 +6912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   columns: 10
-  bulletSpeed: 5
+  bulletSpeed: 4
   texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
@@ -6864,7 +6926,7 @@ MonoBehaviour:
     m_Bits: 1
   space: 1
   parentObject: {fileID: 1710844151}
-  stage: 3
+  stage: 2
   spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1300428946
 GameObject:
@@ -7220,7 +7282,7 @@ MonoBehaviour:
   texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 15
-  firerate: 0.4
+  firerate: 0.5
   bulletSize: 0.45
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: -25
@@ -7416,7 +7478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56d83258397cd349931e017c4815091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 700
+  hp: 1400
   stages: 3
   upperBar: {fileID: 23345493}
   underBar: {fileID: 103710685}
@@ -7701,12 +7763,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   columns: 8
-  bulletSpeed: 10
+  bulletSpeed: 7
   texture: {fileID: -494365301, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
   firerate: 0.4
-  bulletSize: 2
+  bulletSize: 1.7
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: 300
   timeToDestroy: 100
@@ -7842,7 +7904,7 @@ MonoBehaviour:
   texture: {fileID: 73157038, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 0.40921968, g: 1, b: 0.2783019, a: 1}
   lifetime: 15
-  firerate: 0.4
+  firerate: 0.5
   bulletSize: 0.65
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: 100
