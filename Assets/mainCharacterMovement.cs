@@ -4,6 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -56,6 +57,17 @@ public class mainCharacterMovement : MonoBehaviour
             this.GetComponent<bulletHellSpawner>().isShooting = false;
         }
 
+
+        if (Input.GetKey("x"))
+        {
+            health = 4;
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if (health > numberOfHearths)
         {
             health = numberOfHearths;
@@ -87,7 +99,7 @@ public class mainCharacterMovement : MonoBehaviour
         health -= 1f;
         if (health == 0)
         {
-            // SceneManager.LoadScene("MainMenuScene");  
+            SceneManager.LoadScene("4");  
         }
     }
 

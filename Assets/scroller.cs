@@ -43,14 +43,34 @@ public class scroller : MonoBehaviour
         var currentScene = SceneManager.GetActiveScene().name;
         var sceneNumber = int.Parse(currentScene);
         scrollTo = startPosition/2+(endPosition / maxStages) * newStage;
+        string[] madrosci;
+        if (sceneNumber == 1)
+        { 
+        madrosci = new string[]{
+            "Getting to know eachother",
+            "It is what it is",
+            "Getting harder",
+            "Cant keep up?",
+            };
+        }else if(sceneNumber == 2)
+        {
+            madrosci = new string[]{
+            "Water feels cold today",
+            "This guy seems angry",
+            "Sometimes you cant come up with anything"
+            };
+        }
+        else
+        {
+            madrosci = new string[]
+            {
+                "Music seems faster... oh well",
+                "A job is a job",
+                "Last stage?"
+            };
+        }
 
-        string[] madrosci = new string[]{
-            "Wiele żółwi żyło na tej ziemi",
-            "Nie ma sceny zero ale jest bo tak",
-            "Wielcy mędrcy są wielicy",
-        };
-
-        stageNumberUIText.text = $"Chapter {sceneNumber} - {madrosci[sceneNumber-1]}\nStage {newStage + 1}";
+        stageNumberUIText.text = $"Chapter {sceneNumber}\nStage {newStage + 1} - {madrosci[newStage]}";
         StartCoroutine(showStageAnnouncerFor(2.5f));
     }
 
