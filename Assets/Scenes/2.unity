@@ -246,8 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 10
   bulletSpeed: 2.5
-  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 0.22801706, g: 0.7924528, b: 0.6483416, a: 1}
+  texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 0.1514774, g: 0.8679245, b: 0.86358243, a: 1}
   lifetime: 15
   firerate: 0.3
   bulletSize: 0.5
@@ -275,8 +275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 20
   bulletSpeed: 2.5
-  texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 0.10980393, g: 0.30588236, b: 0.37254903, a: 1}
+  texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  color: {r: 0.36078432, g: 0.8392157, b: 0.59000546, a: 1}
   lifetime: 15
   firerate: 0.3
   bulletSize: 0.5
@@ -6795,7 +6795,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 10
   firerate: 0.17
-  size: 0.6
+  size: 0.5
   material: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   spinSpeed: 0
   isShooting: 0
@@ -6852,7 +6852,7 @@ MonoBehaviour:
   columns: 4
   bulletSpeed: 2.5
   texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 0.1137255, g: 0.3254902, b: 0.38431376, a: 1}
+  color: {r: 0.16078432, g: 0.17254902, b: 0.2901961, a: 1}
   lifetime: 15
   firerate: 0.15
   bulletSize: 0.6
@@ -6881,7 +6881,7 @@ MonoBehaviour:
   columns: 4
   bulletSpeed: 2.5
   texture: {fileID: 996574404, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
-  color: {r: 0.10196079, g: 0.78823537, b: 0.7607844, a: 1}
+  color: {r: 0.08627451, g: 0.81568635, b: 0.80392164, a: 1}
   lifetime: 15
   firerate: 0.15
   bulletSize: 0.6
@@ -7471,8 +7471,8 @@ MonoBehaviour:
   speed: 5
   size: 1
   movementBoxCenter: {fileID: 1694710559}
-  movementXLimit: 3
-  movementYLimit: 5
+  movementXLimit: 2.5
+  movementYLimit: 4.5
   standByTime: 10
   system: {fileID: 0}
   columns: 10
@@ -7593,7 +7593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 5
   bulletSpeed: 2.5
-  texture: {fileID: 73157038, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
+  texture: {fileID: 1129612657, guid: 3c31b76f517c3c040baa173f623f3081, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   lifetime: 15
   firerate: 0.3
