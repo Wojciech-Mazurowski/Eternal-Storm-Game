@@ -1,11 +1,8 @@
 # Eternal-Storm-Game
 A simple bullet hell game. Made in Unity, assets inspired by Midjourney and Dalee-e. 
 
-# Some 
-
-https://user-images.githubusercontent.com/46268673/215337469-aee5a532-ff9a-4c4e-9650-42b4e0c9fbf0.mp4
-
-in game footage
+# Some in-game footage
+https://user-images.githubusercontent.com/46268673/215340605-d84de050-fe0a-4b7f-8de2-523fdb8ae348.mp4
 
 # Some screenshots
 ![Eternal_Storm_Game_xdp66gGY42](https://user-images.githubusercontent.com/50964241/215277294-499aa645-e65b-4179-b73d-0238dc033c95.png)
